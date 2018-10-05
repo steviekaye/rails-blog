@@ -12,6 +12,7 @@ class ArticlesController < ApplicationController
 
   def new
     @article = Article.new
+    #@categories = Category.all.map{|c| [ c.name, c.id ] }
   end
 
   def edit
@@ -19,7 +20,9 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = Article.new(article_params)
+    #byebug
+    #@article = Article.new(article_params)
+    @article = Article.new(:title => params[:article][:title], :text => params[:article][:text], :category => Category.find(params[:category_id]))
 
     if @article.save
       redirect_to @article
@@ -47,6 +50,6 @@ end
 
   private
     def article_params
-      params.require(:article).permit(:title, :text)
+      params.require(:article).permit(:title, :text, :category_id)
     end
 end
