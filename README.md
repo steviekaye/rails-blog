@@ -16,6 +16,8 @@ cd rails-blog
 bundle install
 sudo -u postgres createuser -s rails-blog
 bundle exec rake db:create:all
+rake db:migrate
+rake db:seed
 rails server
 ```
 
