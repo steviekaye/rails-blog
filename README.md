@@ -2,6 +2,8 @@
 
 https://infinite-badlands-29373.herokuapp.com/
 
+I'm interested in learning about Rails, so this project follows the Rails Intro Tutorial. I've deployed it to Heroku and am in the process of adding more features.
+
 ### To run locally
 
 Dependencies:
