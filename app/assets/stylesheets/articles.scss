@@ -1,3 +1,48 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1 {
+  text-align: center;
+}
+
+.button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.centre {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.article-menu {
+  /* ... */
+  border: 1px solid #000;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.article-container {
+  border: 1px solid #000;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.article-actions {
+  display: flex;
+  justify-content: space-around;
+}
+
+.action {
+  margin-right: 20px;
+}

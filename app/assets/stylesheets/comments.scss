@@ -1,3 +1,35 @@
 // Place all the styles related to the Comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.comment-container {
+  /* ... */
+  border: 1px solid #000;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.comment-footer {
+  // align-items: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.comment-delete {
+  // display: flex;
+  // justify-content: flex-end;
+}
