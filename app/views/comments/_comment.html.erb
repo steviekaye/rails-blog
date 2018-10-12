@@ -5,15 +5,11 @@
   <%= comment.body %>
   </div>
   <div class = 'comment-footer'>
-    <div class = 'comment-author'>
-      posted by: <%= comment.commenter %>
-    </div>
+    <p>posted by: <%= comment.commenter %></p>
 
-    <div class = 'comment-delete'>
-      <%= link_to 'Delete comment', [comment.article, comment],
+    <%= link_to 'Delete comment', article_comments_path(comment),
                    method: :delete,
                    data: { confirm: 'Are you sure?' }, class: 'button' %>
-    </div>
   </div>
 
 </div>

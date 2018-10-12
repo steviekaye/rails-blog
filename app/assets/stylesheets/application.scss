@@ -13,3 +13,37 @@
  *= require_tree .
  *= require_self
  */
+
+$accent: #c119ae;
+$header-hover: #601157;
+
+body {
+  font-family: "Krub", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: $accent;
+}
+
+.header {
+  font-family: "Fugaz One", cursive;
+  color: $accent;
+  text-decoration: none;
+
+  a:visited {
+    color: $accent;
+  }
+
+  a:hover {
+    color: $header-hover;
+  }
+}

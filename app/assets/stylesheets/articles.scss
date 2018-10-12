@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$header-color: #c119ae;
+
 h1 {
   text-align: center;
 }
@@ -24,18 +26,21 @@ h1 {
 
 .article-menu {
   /* ... */
-  border: 1px solid #000;
-  width: 100%;
+  // border: 1px solid #000;
+  // width: 100%;
   display: flex;
-  justify-content: flex-start;
+  // justify-content: flex-start;
   flex-direction: column;
 }
 
 .article-container {
-  border: 1px solid #000;
-  width: 100%;
+  // border: 1px solid #000;
   display: flex;
   justify-content: space-between;
+  background-color: lighten($header-color, 55%);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 6px;
 }
 
 .article-actions {
