@@ -14,7 +14,6 @@
 }
 
 .comment-container {
-  /* ... */
   border: 1px solid #000;
   width: 100%;
   display: flex;
@@ -23,13 +22,7 @@
 }
 
 .comment-footer {
-  // align-items: flex-end;
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.comment-delete {
-  // display: flex;
-  // justify-content: flex-end;
 }

@@ -14,8 +14,7 @@
  *= require_self
  */
 
-$accent: #c119ae;
-$header-hover: #601157;
+@import "colours";
 
 body {
   font-family: "Krub", sans-serif;
