@@ -1,18 +1,23 @@
 <%= render 'header' %>
 
-
-
 <div class='article-menu'>
-
 
   <% @articles.each do |article| %>
     <div class='article-container'>
       <div><%= link_to article.title, article_path(article) %></div>
       <div class='article-actions'>
-        <div class='action'><%= link_to 'Edit', edit_article_path(article) %></div>
-        <div class='action'><%= link_to 'Destroy', article_path(article),
-        method: :delete,
-        data: { confirm: 'Are you sure?' } %></div>
+        <div class='action'>
+          <%= link_to edit_article_path(article) do %>
+            <i class="fas fa-edit"></i>
+          <% end %>
+        </div>
+        <div class='action'>
+          <%= link_to article_path(article),
+                method: :delete,
+                data: { confirm: 'Are you sure?' } do %>
+            <i class="fas fa-trash-alt"></i>
+          <% end %>
+        </div>
       </div>
     </div>
   <% end %>
