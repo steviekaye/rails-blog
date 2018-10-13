@@ -24,15 +24,6 @@ body {
 
 a {
   text-decoration: none;
-  color: black;
-}
-
-a:visited {
-  color: black;
-}
-
-a:hover {
-  color: $accent;
 }
 
 .header {
@@ -47,4 +38,13 @@ a:hover {
   a:hover {
     color: $header-hover;
   }
+}
+
+.button {
+  background-color: $accent;
+  padding: 12px 14px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  color: white;
 }
