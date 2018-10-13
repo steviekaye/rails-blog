@@ -8,6 +8,11 @@ h1 {
   text-align: center;
 }
 
+textarea {
+  width: 90%;
+  height: 150px;
+}
+
 .centre {
   width: 50%;
   margin: 0 auto;
@@ -52,4 +57,15 @@ h1 {
 
 .action {
   margin-right: 20px;
+}
+
+.entry-text {
+  background-color: lighten($accent, 50%);
+  padding: 15px;
+  font-size: 14px;
+}
+
+.category {
+  font-style: italic;
+  color: $dark-accent;
 }

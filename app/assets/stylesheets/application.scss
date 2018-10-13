@@ -36,13 +36,18 @@ a {
   }
 
   a:hover {
-    color: $header-hover;
+    color: $dark-accent;
   }
+}
+
+input.button {
+  border: none;
 }
 
 .button {
   background-color: $accent;
   padding: 12px 14px;
+  font-size: 14px;
   text-align: center;
   text-decoration: none;
   border-radius: 8px;
