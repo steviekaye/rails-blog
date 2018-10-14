@@ -2,16 +2,40 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import "colours";
+
 .comment-container {
-  border: 1px solid #000;
+  // border: 1px solid #000;
   width: 100%;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.comment-body {
+  background-color: lighten($accent, 50%);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 6px;
 }
 
 .comment-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  a:visited {
+    color: black;
+  }
+
+  a:hover {
+    color: $accent;
+  }
 }

@@ -25,7 +25,8 @@
 </p>
 
 <p>
-  <%= select_tag(:category_id, options_for_select(Category.all.map{|c| [ c.name, c.id ] }), :prompt => "Select one!") %>
+  <%= select_tag(:category_id, options_for_select(Category.all.map{|c| [ c.name, c.id ] }, selected: @article.category_id),
+                  prompt: "Select one!") %>
 </p>
 
 

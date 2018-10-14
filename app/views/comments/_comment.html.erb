@@ -1,15 +1,16 @@
 
-
 <div class = 'comment-container'>
   <div class = 'comment-body'>
   <%= comment.body %>
   </div>
   <div class = 'comment-footer'>
-    <p>posted by: <%= comment.commenter %></p>
+    posted by: <%= comment.commenter %>
 
-    <%= link_to 'Delete comment', article_comments_path(comment),
+    <%= link_to article_comments_path(comment),
                    method: :delete,
-                   data: { confirm: 'Are you sure?' }, class: 'button' %>
+                   data: { confirm: 'Are you sure?' } do %>
+                   <i class="fas fa-trash-alt"></i>
+                   <% end %>
   </div>
 
 </div>
