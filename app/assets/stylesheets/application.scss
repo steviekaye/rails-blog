@@ -20,6 +20,11 @@
 
 body {
   font-family: "Krub", sans-serif;
+
+  @media screen and (min-width: 390px) {
+    width: 400px;
+    margin: auto;
+  }
 }
 
 a {
