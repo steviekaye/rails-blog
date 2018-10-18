@@ -13,11 +13,6 @@ textarea {
   height: 150px;
 }
 
-.centre {
-  width: 50%;
-  margin: 0 auto;
-}
-
 .button-container {
   display: flex;
   justify-content: center;
@@ -31,22 +26,12 @@ textarea {
 .article-container {
   display: flex;
   justify-content: space-between;
-  background-color: lighten($accent, 50%);
-  margin-top: 5px;
-  margin-bottom: 5px;
+  background-color: $light-accent;
+  margin: 5px 0;
   padding: 6px;
 
   a {
     text-decoration: none;
-    color: black;
-  }
-
-  a:visited {
-    color: black;
-  }
-
-  a:hover {
-    color: $accent;
   }
 }
 
@@ -59,7 +44,7 @@ textarea {
   margin-right: 20px;
 }
 
-.entry-text {
+.article-text {
   background-color: lighten($accent, 50%);
   padding: 15px;
   font-size: 14px;
