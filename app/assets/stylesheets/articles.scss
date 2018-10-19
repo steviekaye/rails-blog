@@ -45,7 +45,7 @@ textarea {
 }
 
 .article-text {
-  background-color: lighten($accent, 50%);
+  background-color: $light-accent;
   padding: 15px;
   font-size: 14px;
 }
