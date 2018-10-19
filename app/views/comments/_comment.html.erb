@@ -1,15 +1,16 @@
-<p>
-  <strong>Commenter:</strong>
-  <%= comment.commenter %>
-</p>
 
-<p>
-  <strong>Comment:</strong>
+<div class = 'comment-container'>
+  <div class = 'comment-body'>
   <%= comment.body %>
-</p>
+  </div>
+  <div class = 'comment-footer'>
+    posted by: <%= comment.commenter %>
 
-<p>
-  <%= link_to 'Destroy Comment', [comment.article, comment],
-               method: :delete,
-               data: { confirm: 'Are you sure?' } %>
-</p>
+    <%= link_to article_comments_path(comment),
+                   method: :delete,
+                   data: { confirm: 'Are you sure?' } do %>
+                   <i class="fas fa-trash-alt"></i>
+                   <% end %>
+  </div>
+
+</div>

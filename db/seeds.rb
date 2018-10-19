@@ -11,5 +11,5 @@
 end
 
 5.times do |i|
-  Article.create(title: "Blog ##{i}", text: "This is some example text.")
+  Article.create(title: "Blog ##{i}", text: "This is some example text.", category_id: 1)
 end
