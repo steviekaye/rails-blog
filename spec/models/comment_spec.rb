@@ -35,15 +35,4 @@ RSpec.describe Comment, type: :model do
     end
   end
 
-  context "when an associated article doesn't exist" do
-    it "is invalid" do
-      comment = Comment.new(
-        commenter: "Mr T",
-        body: "I'm a comment"
-      )
-      comment.valid?
-      expect(comment.errors[:article]).to include("must exist")
-    end
-  end
-
 end

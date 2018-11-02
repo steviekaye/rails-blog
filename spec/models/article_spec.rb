@@ -9,6 +9,7 @@ RSpec.describe Article, type: :model do
         category: Category.new(),
         text: "I'm an article"
       )
+
       expect(article).to be_valid
     end
   end
@@ -20,7 +21,9 @@ RSpec.describe Article, type: :model do
         category: Category.new(),
         text: "I'm an article"
       )
+
       article.valid?
+
       expect(article.errors[:title]).to include("is too short (minimum is 5 characters)")
     end
   end
@@ -32,6 +35,7 @@ RSpec.describe Article, type: :model do
         category: Category.new(),
         text: "I'm an article"
       )
+
       expect(article).to be_valid
     end
   end
@@ -43,7 +47,9 @@ RSpec.describe Article, type: :model do
         category: Category.new(),
         text: "a"
       )
+
       article.valid?
+      
       expect(article.errors[:text]).to include("is too short (minimum is 2 characters)")
     end
   end
