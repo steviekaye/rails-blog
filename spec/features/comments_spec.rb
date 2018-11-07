@@ -17,4 +17,19 @@ RSpec.feature "Comments", type: :feature do
     expect(page).to have_content comment.commenter
     expect(page).to have_content comment.body
   end
+
+  scenario "delete a comment", js: true do
+    comment = FactoryBot.create(:comment)
+
+    visit root_path
+    click_link 'Read article'
+
+    expect {
+
+    accept_alert 'Are you sure?' do
+      click_link 'Delete comment'
+    end
+    sleep 1.second
+  }.to change(Comment.all, :count).by(-1)
+  end
 end

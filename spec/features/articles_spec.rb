@@ -59,16 +59,17 @@ RSpec.feature "Articles", type: :feature do
   # interactions are giving     Selenium::WebDriver::Error::UnknownError:
   #     invalid argument: can't kill an exited proces
 
-  # scenario "delete an article", js: true do
-  #   article = FactoryBot.create(:article)
-  #
-  #   visit root_path
-  #
-  #   expect {
-  #   click_link 'Delete article'
-  #   page.accept_alert 'Are you sure?' do
-  #     click_button('OK')
-  #   end
-  #   }.to change(Article.all, :count).by(-1)
-  # end
+  scenario "delete an article", js: true do
+    article = FactoryBot.create(:article)
+
+    visit root_path
+
+    expect {
+
+    accept_alert 'Are you sure?' do
+      click_link 'Delete article'
+    end
+    sleep 1.second
+    }.to change(Article.all, :count).by(-1)
+  end
 end
