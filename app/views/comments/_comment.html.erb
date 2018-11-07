@@ -6,7 +6,7 @@
   <div class = 'comment-footer'>
     posted by: <%= comment.commenter %>
 
-    <%= link_to article_comments_path(comment),
+    <%= link_to article_comment_path(comment.article, comment),
                    method: :delete,
                    data: { confirm: 'Are you sure?' } do %>
                    <i class="fas fa-trash-alt"></i>
