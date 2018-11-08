@@ -29,7 +29,7 @@ And browse to `localhost:3000`
 
 Dependencies:
 
-- Geckodriver
+- Chromedriver
 - Firefox
 
 To run tests

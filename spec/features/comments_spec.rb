@@ -5,8 +5,7 @@ RSpec.feature "Comments", type: :feature do
   scenario "create a comment" do
     comment = FactoryBot.build(:comment)
 
-    visit root_path
-    click_link 'Read article'
+    visit article_path(comment.article_id)
 
     expect {
       fill_in "Commenter", with: comment.commenter
@@ -21,15 +20,14 @@ RSpec.feature "Comments", type: :feature do
   scenario "delete a comment", js: true do
     comment = FactoryBot.create(:comment)
 
-    visit root_path
-    click_link 'Read article'
+    visit article_path(comment.article_id)
 
     expect {
 
     accept_alert 'Are you sure?' do
       click_link 'Delete comment'
     end
-    sleep 1.second
+    sleep 1
   }.to change(Comment.all, :count).by(-1)
   end
 end

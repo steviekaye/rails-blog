@@ -1,14 +1,17 @@
-require 'rails_helper'
 
 RSpec.feature "Articles", type: :feature do
-  before do
+  before (:all) do
     @category = FactoryBot.create(:category)
   end
 
-  scenario "unsucessfully create a new article" do
-    article = FactoryBot.build(:article)
-
+  before (:each) do
     visit root_path
+  end
+
+  let (:article) { FactoryBot.build(:article) }
+
+  scenario "unsucessfully create a new article" do
+
     click_link "New article"
 
     expect {
@@ -22,9 +25,7 @@ RSpec.feature "Articles", type: :feature do
   end
 
   scenario "creates a new article" do
-    article = FactoryBot.build(:article)
 
-    visit root_path
     click_link "New article"
 
     expect {
@@ -42,7 +43,6 @@ RSpec.feature "Articles", type: :feature do
   scenario "edit an article" do
     article = FactoryBot.create(:article)
 
-    visit root_path
     click_link 'Edit article'
 
     expect(page).to have_content "Edit article"
@@ -55,21 +55,15 @@ RSpec.feature "Articles", type: :feature do
     expect(page).to have_content "This has been edited"
   end
 
-  # commenting out deletion scenario while geckodriver/selenium/firefox
-  # interactions are giving     Selenium::WebDriver::Error::UnknownError:
-  #     invalid argument: can't kill an exited proces
-
   scenario "delete an article", js: true do
     article = FactoryBot.create(:article)
-
-    visit root_path
 
     expect {
 
     accept_alert 'Are you sure?' do
       click_link 'Delete article'
     end
-    sleep 1.second
+    sleep 1
     }.to change(Article.all, :count).by(-1)
   end
 end
