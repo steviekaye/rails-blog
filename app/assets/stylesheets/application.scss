@@ -66,4 +66,8 @@ input.button {
   text-decoration: none;
   border-radius: 8px;
   color: white;
+
+  &:hover {
+    color: white;
+  }
 }
