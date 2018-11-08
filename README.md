@@ -1,8 +1,13 @@
-# WIP
+# [Rails-blog](https://infinite-badlands-29373.herokuapp.com/)
 
-https://infinite-badlands-29373.herokuapp.com/
+I'm interested in learning about Rails, so this project used the [Rails Intro Tutorial](https://guides.rubyonrails.org/getting_started.html) as a starting point, which I then extended.
 
-I'm interested in learning about Rails, so this project follows the Rails Intro Tutorial. I've deployed it to Heroku and am in the process of adding more features.
+Some of the things I learned over the course of the project beyond the scope of the tutorial included
+
+- CSS/SASS styling, including responsive principles & FlexBox
+- Testing with RSpec, including the use of Capybara for feature tests
+- deployment to Heroku
+- git workflow, including branches and pull request feedback cycles
 
 ### To run locally
 
