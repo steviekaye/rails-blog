@@ -1,5 +1,8 @@
 
 RSpec.feature "Articles", type: :feature do
+
+  let (:article) { FactoryBot.build(:article) }
+
   before (:all) do
     @category = FactoryBot.create(:category)
   end
@@ -7,8 +10,6 @@ RSpec.feature "Articles", type: :feature do
   before (:each) do
     visit root_path
   end
-
-  let (:article) { FactoryBot.build(:article) }
 
   scenario "unsucessfully create a new article" do
 
@@ -59,11 +60,12 @@ RSpec.feature "Articles", type: :feature do
     article = FactoryBot.create(:article)
 
     expect {
-
-    accept_alert 'Are you sure?' do
-      click_link 'Delete article'
-    end
-    sleep 1
+      accept_alert 'Are you sure?' do
+        click_link 'Delete article'
+      end
+      sleep 1
     }.to change(Article.all, :count).by(-1)
+
+    expect(page).not_to have_content article.title
   end
 end

@@ -30,7 +30,7 @@ And browse to `localhost:3000`
 Dependencies:
 
 - Chromedriver
-- Firefox
+- Chrome
 
 To run tests
 

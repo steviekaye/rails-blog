@@ -24,10 +24,12 @@ RSpec.feature "Comments", type: :feature do
 
     expect {
 
-    accept_alert 'Are you sure?' do
-      click_link 'Delete comment'
-    end
-    sleep 1
-  }.to change(Comment.all, :count).by(-1)
+      accept_alert 'Are you sure?' do
+        click_link 'Delete comment'
+      end
+      sleep 1
+    }.to change(Comment.all, :count).by(-1)
+
+    expect(page).not_to have_content comment.body
   end
 end
