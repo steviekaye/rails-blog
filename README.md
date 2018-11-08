@@ -25,9 +25,15 @@ rails server
 
 And browse to `localhost:3000`
 
+### Tests
+
+Dependencies:
+
+- Chromedriver
+- Chrome
+
 To run tests
 
 ```bash
-cd rails-blog
 bin/rspec
 ```
